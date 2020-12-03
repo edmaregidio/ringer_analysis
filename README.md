@@ -90,7 +90,7 @@ each branch must be assigned to some one. The branches are tagged follow the
 physics channel type name and the LHC periods (for example: channel_period).
 
 
-- `zee_run2`: This branch is dedicated to all analysis during the Run 2.
+- `zee_run2`: This branch is dedicated to all analysis during the Run 2. This branch was assigned to João Victor Pinto and Werner Freund as responbles;
 
 
 ## Notes:
