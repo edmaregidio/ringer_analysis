@@ -10,6 +10,7 @@ are used to minimize fluctuations from detector response, according to the
 particle energy and position of incidence. This reposiroty is dedicated to hold
 all tuning scripts for each subgroup in the ATLAS e/g trigger group. 
 
+> Do not change anything in the master branch.
 
 ## Introduction:
 
@@ -97,4 +98,10 @@ physics channel type name and the LHC periods (for example: channel_period).
 > **WARNING**: This is a public repository.
 
 
+## Contributions:
+
+- João Victor da Fonseca Pinto (jodafons@cern.ch);
+- Werner Freund (wsfreund@cern.ch);
+- Micael Verissimo (mverissi@cern.ch);
+- José Manoel de Seixas (seixas@lps.ufrj.br);
 
