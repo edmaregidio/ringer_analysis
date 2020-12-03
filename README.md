@@ -85,7 +85,7 @@ discriminating patterns.
 ## Branches:
 
 This repository is dedicated to include all analysis for the ringer group. This
-repository is organize like this:
+repository is organize in physics channel and LHC periods:
 
 - `zee_run2`: Include all analysis for the `Zee` channel during the `Run 2` period;
 
