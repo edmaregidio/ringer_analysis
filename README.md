@@ -82,17 +82,22 @@ information contained in concentric rings of energy deposition, which compacts
 the information through physics expert knowledge, while keeping the
 discriminating patterns.
 
-## Branches:
+## Branch:
 
-This repository is dedicated to include all analysis for the ringer group. This
-repository is organize in physics channel and LHC periods:
+This branch is dedicated to all analysis for Zee channel during the Run 2 period.
 
-- `zee_run2`: Include all analysis for the `Zee` channel during the `Run 2` period;
+
+## Organization:
+
+This branch is organize like this:
+
+- 2017: Include all analysis during the ringer commissioning period (ringer monte carlo tuning);
+- 2018: Include all analysis and studies for ringer data driven tuning;
+- 2020: Ringer preparation for Run 3;
+- data: Include all scripts responsible to dump the training samples;
 
 
 ## Notes:
 
 > **WARNING**: This is a public repository.
-
-
 
