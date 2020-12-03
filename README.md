@@ -87,12 +87,12 @@ discriminating patterns.
 This repository is dedicated to include all analysis for the ringer group. This
 repository is organize like this:
 
-- zee_run2: Include all analysis for the Zee channel during the Run 2 period;
-
-
+- `zee_run2`: Include all analysis for the `Zee` channel during the `Run 2` period;
 
 
 ## Notes:
 
 > **WARNING**: This is a public repository.
+
+
 
