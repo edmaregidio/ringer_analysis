@@ -1,5 +1,5 @@
 
-# The Ringer Logbook Repository
+# The Ringer Book
 
 In 2017 the ATLAS experiment implemented an ensemble of neural networks
 (NeuralRinger algorithm) dedicated to improving the performance of filtering
@@ -82,16 +82,18 @@ information contained in concentric rings of energy deposition, which compacts
 the information through physics expert knowledge, while keeping the
 discriminating patterns.
 
-## Branches:
+## Organization:
 
-This repository is dedicated to include all analysis for the ringer group. This
-repository is organize in physics channel and LHC periods:
+This repository is dedicated to include all analysis for the ringer group where 
+each branch must be assigned to some one. The branches are tagged follow the 
+physics channel type name and the LHC periods (for example: channel_period).
 
-- `zee_run2`: Include all analysis for the `Zee` channel during the `Run 2` period;
+
+- `zee_run2`: This branch is dedicated to all analysis during the Run 2.
 
 
 ## Notes:
-
+> **INFO**:When a new branch is created, you should update this readme.
 > **WARNING**: This is a public repository.
 
 
