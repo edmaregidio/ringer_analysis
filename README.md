@@ -1,5 +1,5 @@
 
-# Zee Channel
+# Zee Channel: Run 2
 
 This branch is dedicated to all analysis related to the Zee physics channel during the Run 2 period. 
 
