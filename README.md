@@ -13,3 +13,7 @@ We should include some description here.
 
 > **WARNING**: This is a public repository.
 
+## Responsibles:
+
+- João Victor da Fonseca Pinto (jodafons@cern.ch or jodafons@lps.ufrj.br)
+
