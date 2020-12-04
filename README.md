@@ -1,7 +1,7 @@
 
 # Zee Channel
 
-This branch is dedicated to all analysis related to the Zee physics channel during the Run 2 period. This period is divided in three years (see description below).
+This branch is dedicated to all analysis related to the Zee physics channel during the Run 2 period. 
 
 ## Organization:
 
