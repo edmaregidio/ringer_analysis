@@ -75,12 +75,12 @@ ToolSvc += evt
 #installElectronL2CaloRingerSelector_v6()
 
 # Install ringer v8
-from TrigEgammaEmulationTool import installElectronL2CaloRingerSelector_v8
+#from TrigEgammaEmulationTool import installElectronL2CaloRingerSelector_v8
 #installElectronL2CaloRingerSelector_v8()
 
 # Install ringer v9
 from TrigEgammaEmulationTool import installElectronL2CaloRingerSelector_v9
-installElectronL2CaloRingerSelector_v9()
+#installElectronL2CaloRingerSelector_v9()
 
 # Install ringer v10
 from TrigEgammaEmulationTool import installElectronL2CaloRingerSelector_v10
@@ -96,7 +96,7 @@ from TrigEgammaEmulationTool import installElectronL2CaloRingerSelector_v1_el
 
 # Install ringer v2_el
 from TrigEgammaEmulationTool import installElectronL2CaloRingerSelector_v2_el
-#installElectronL2CaloRingerSelector_v2_el()
+installElectronL2CaloRingerSelector_v2_el()
 
 # Install trigger e/g fastcalo cut-based selector (T2Calo)
 from TrigEgammaEmulationTool import installTrigEgammaL2CaloSelectors
@@ -107,16 +107,11 @@ from PileupCorrectionTools import PileupCorrectionTool, Target
 alg = PileupCorrectionTool( 'PileupCorrection' , IsBackground = True if args.doEgam7 else False)
 
 targets = [
-            #Target( 'L2_Tight_v8' , 'T0HLTElectronRingerTight_v8' , "T0HLTElectronT2CaloTight"  ) ,
+            # set v9 to be like the legacy cutbased
+            #Target( 'L2_Tight_v9' , 'T0HLTElectronRingerTight_v9' , "T0HLTElectronT2CaloTight"  ) ,
             #Target( 'L2_Medium_v9', 'T0HLTElectronRingerTight_v9' , "T0HLTElectronT2CaloMedium" ) ,
             #Target( 'L2_Loose_v9' , 'T0HLTElectronRingerTight_v9' , "T0HLTElectronT2CaloLoose"  ) ,
             #Target( 'L2_VLoose_v9', 'T0HLTElectronRingerTight_v9' , "T0HLTElectronT2CaloVLoose" ) ,
-    
-            # set v9 to be like the legacy cutbased
-            Target( 'L2_Tight_v9' , 'T0HLTElectronRingerTight_v9' , "T0HLTElectronT2CaloTight"  ) ,
-            Target( 'L2_Medium_v9', 'T0HLTElectronRingerTight_v9' , "T0HLTElectronT2CaloMedium" ) ,
-            Target( 'L2_Loose_v9' , 'T0HLTElectronRingerTight_v9' , "T0HLTElectronT2CaloLoose"  ) ,
-            Target( 'L2_VLoose_v9', 'T0HLTElectronRingerTight_v9' , "T0HLTElectronT2CaloVLoose" ) ,
             # set v10 to be like the legacy cutbased
             #Target( 'L2_Tight_v10' , 'T0HLTElectronRingerTight_v10' , "T0HLTElectronT2CaloTight"  ) ,
             #Target( 'L2_Medium_v10', 'T0HLTElectronRingerTight_v10' , "T0HLTElectronT2CaloMedium" ) ,
@@ -133,10 +128,10 @@ targets = [
             #Target( 'L2_Loose_v1_el' , 'T0HLTElectronRingerTight_v1_el' , "T0HLTElectronT2CaloLoose"  ) ,
             #Target( 'L2_VLoose_v1_el', 'T0HLTElectronRingerTight_v1_el' , "T0HLTElectronT2CaloVLoose" ) ,
             ## set v10 to be like the legacy cutbased
-            #Target( 'L2_Tight_v2_el' , 'T0HLTElectronRingerTight_v2_el' , "T0HLTElectronT2CaloTight"  ) ,
-            #Target( 'L2_Medium_v2_el', 'T0HLTElectronRingerTight_v2_el' , "T0HLTElectronT2CaloMedium" ) ,
-            #Target( 'L2_Loose_v2_el' , 'T0HLTElectronRingerTight_v2_el' , "T0HLTElectronT2CaloLoose"  ) ,
-            #Target( 'L2_VLoose_v2_el', 'T0HLTElectronRingerTight_v2_el' , "T0HLTElectronT2CaloVLoose" ) ,
+            Target( 'L2_Tight_v2_el' , 'T0HLTElectronRingerTight_v2_el' , "T0HLTElectronT2CaloTight"  ) ,
+            Target( 'L2_Medium_v2_el', 'T0HLTElectronRingerTight_v2_el' , "T0HLTElectronT2CaloMedium" ) ,
+            Target( 'L2_Loose_v2_el' , 'T0HLTElectronRingerTight_v2_el' , "T0HLTElectronT2CaloLoose"  ) ,
+            Target( 'L2_VLoose_v2_el', 'T0HLTElectronRingerTight_v2_el' , "T0HLTElectronT2CaloVLoose" ) ,
 
         ]
 
@@ -145,7 +140,7 @@ for t in targets:
 
 etbins  = [15.0, 20.0, 30.0, 40.0, 50.0, 1000000.0]
 etabins = [0.0, 0.8, 1.37, 1.54, 2.37, 2.50]
-alg.setHistogram2DRegion( -16, 16, 0, 70, 0.02, 0.5 )
+alg.setHistogram2DRegion( -30, 30, 0, 70, 0.02, 0.5 )
 alg.setEtBinningValues( etbins   )
 alg.setEtaBinningValues( etabins )
 
