@@ -12,6 +12,8 @@ all tuning scripts for each subgroup in the ATLAS e/g trigger group.
 
 > Do not change anything in the master branch.
 
+> This repository is dedicated to all analysis made by jodafons (Github user).
+
 ## Introduction:
 
 Proliferation of big data applications is an outcome of the technological
