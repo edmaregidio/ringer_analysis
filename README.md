@@ -12,7 +12,7 @@ all tuning scripts for each subgroup in the ATLAS e/g trigger group.
 
 > Do not change anything in the master branch.
 
-> This repository is dedicated to all analysis made by jodafons (Github user).
+> This repository is dedicated to all analysis made by **jodafons** (Github user).
 
 ## Introduction:
 
