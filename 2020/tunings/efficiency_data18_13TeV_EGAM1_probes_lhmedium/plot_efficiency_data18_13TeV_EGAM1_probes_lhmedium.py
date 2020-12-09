@@ -15,8 +15,8 @@ mainLogger.level = LoggingLevel.INFO
 
 def plot_table( sg, logger, trigger, basepath ):
   triggerLevels = ['L1Calo','L2Calo','L2','EFCalo','HLT']
-  logger.info( '{:-^78}'.format((' %s ')%(trigger)) ) 
-  
+  logger.info( '{:-^78}'.format((' %s ')%(trigger)) )
+
   for trigLevel in triggerLevels:
     dirname = basepath+'/'+trigger+'/Efficiency/'+trigLevel
     total  = sg.histogram( dirname+'/eta' ).GetEntries()
@@ -33,7 +33,6 @@ def plot_table( sg, logger, trigger, basepath ):
 
 
 
-#inputFile = '../phd_data/efficiency_v8_data18_13TeV_EGAM1_probes_lhmedium/efficiency_v8_data18_13TeV_EGAM1_probes_lhmedium.root'
 inputFile = 'efficiency_data18_13TeV_EGAM1_probes_lhmedium.root'
 basepath = 'Event/EfficiencyTool'
 
@@ -43,7 +42,7 @@ sg =  restoreStoreGate( inputFile )
 
 
 
-triggers = [ 
+triggers = [
              "EMU_e17_lhvloose_nod0_noringer_L1EM15VHI",
              #"EMU_e17_lhvloose_nod0_ringer_v6_L1EM15VHI",
              "EMU_e17_lhvloose_nod0_ringer_v8_L1EM15VHI",
@@ -56,7 +55,7 @@ eff_et  = [ sg.histogram( basepath+'/'+trigger+'/Efficiency/HLT/eff_et' ) for tr
 eff_eta = [ sg.histogram( basepath+'/'+trigger+'/Efficiency/HLT/eff_eta' ) for trigger in triggers ]
 eff_phi = [ sg.histogram( basepath+'/'+trigger+'/Efficiency/HLT/eff_phi' ) for trigger in triggers ]
 eff_mu  = [ sg.histogram( basepath+'/'+trigger+'/Efficiency/HLT/eff_mu' ) for trigger in triggers ]
-          
+
 
 legends = ['noringer', 'ringer v8', 'ringer v11', 'ringer v11 + v2_el']
 
@@ -77,7 +76,7 @@ for trigger in triggers:
 
 
 
-triggers = [ 
+triggers = [
              "EMU_e28_lhtight_nod0_noringer_ivarloose",
              #"EMU_e28_lhtight_nod0_ringer_v6_ivarloose",
              "EMU_e28_lhtight_nod0_ringer_v8_ivarloose",
@@ -90,7 +89,7 @@ eff_et  = [ sg.histogram( basepath+'/'+trigger+'/Efficiency/HLT/eff_et' ) for tr
 eff_eta = [ sg.histogram( basepath+'/'+trigger+'/Efficiency/HLT/eff_eta' ) for trigger in triggers ]
 eff_phi = [ sg.histogram( basepath+'/'+trigger+'/Efficiency/HLT/eff_phi' ) for trigger in triggers ]
 eff_mu  = [ sg.histogram( basepath+'/'+trigger+'/Efficiency/HLT/eff_mu' ) for trigger in triggers ]
-          
+
 
 legends = ['noringer', 'ringer v8', 'ringer v11', 'ringer v11 + v2_el']
 

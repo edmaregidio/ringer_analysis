@@ -46,7 +46,6 @@ from EventSelectionTool import EventSelection, SelectionType, EtCutType
 
 evt = EventSelection('EventSelection')
 evt.setCutValue( SelectionType.SelectionOnlineWithRings )
-evt.setCutValue( SelectionType.SelectionOnlineWithTrigElectrons )
 
 pidname = '!el_lhvloose'
 
@@ -69,21 +68,15 @@ triggerList = [
                 Group( Chain( "EMU_e17_lhvloose_nod0_ringer_v11_v2_el_L1EM15VHI", "L1_EM15VHI", "HLT_e17_lhvloose_nod0_ringer_v11_v2_el_L1EM15VHI"  ), None, 17 ),
 
 
-
-                # e17 lhloose
-                #Group( TDT( "TDT_e17_lhloose_nod0" , "HLT_e17_lhloose_nod0"   ), None, 17 ),
-                #Group( Chain( "EMU_e17_lhloose_nod0_noringer"                  , "L1_EM15VH", "HLT_e17_lhloose_nod0_noringer"    ), None, 17 ),
-                #Group( Chain( "EMU_e17_lhloose_nod0_ringer_v6"                 , "L1_EM15VH", "HLT_e17_lhloose_nod0_ringer_v6"   ), None, 17 ),
-                #Group( Chain( "EMU_e17_lhloose_nod0_ringer_v8"                 , "L1_EM15VH", "HLT_e17_lhloose_nod0_ringer_v8"   ), None, 17 ),
-                #Group( Chain( "EMU_e17_lhloose_nod0_ringer_v10"                , "L1_EM15VH", "HLT_e17_lhloose_nod0_ringer_v10"  ), None, 17 ),
-
-
-                # # e60 lhmedium
-                #Group( TDT( "TDT_e60_lhmedium_nod0" , "HLT_e60_lhmedium_nod0"   ), None, 60 ),
-                #Group( Chain( "EMU_e60_lhmedium_nod0_noringer'"               , "L1_EM22VHI", "HLT_e60_lhmedium_nod0_noringer"   ), None, 60 ),
-                #Group( Chain( "EMU_e60_lhmedium_nod0_ringer_v6"               , "L1_EM22VHI", "HLT_e60_lhmedium_nod0_ringer_v6"  ), None, 60 ),
-                #Group( Chain( "EMU_e60_lhmedium_nod0_ringer_v8"               , "L1_EM22VHI", "HLT_e60_lhmedium_nod0_ringer_v8"  ), None, 60 ),
-                #Group( Chain( "EMU_e60_lhmedium_nod0_ringer_v10"              , "L1_EM22VHI", "HLT_e60_lhmedium_nod0_ringer_v10" ), None, 60 ),
+                ## e60 lhmedium
+                Group( TDT( "TDT_e60_lhmedium_nod0" , "HLT_e60_lhmedium_nod0"   ), None, 60 ),
+                Group( Chain( "EMU_e60_lhmedium_nod0_noringer"                , "L1_EM22VHI", "HLT_e60_lhmedium_nod0_noringer"   ), None, 60 ),
+                Group( Chain( "EMU_e60_lhmedium_nod0_ringer_v6"               , "L1_EM22VHI", "HLT_e60_lhmedium_nod0_ringer_v6"  ), None, 60 ),
+                Group( Chain( "EMU_e60_lhmedium_nod0_ringer_v8"               , "L1_EM22VHI", "HLT_e60_lhmedium_nod0_ringer_v8"  ), None, 60 ),
+                Group( Chain( "EMU_e60_lhmedium_nod0_ringer_v9"               , "L1_EM22VHI", "HLT_e60_lhmedium_nod0_ringer_v9" ), None, 60 ),
+                Group( Chain( "EMU_e60_lhmedium_nod0_ringer_v10"              , "L1_EM22VHI", "HLT_e60_lhmedium_nod0_ringer_v10" ), None, 60 ),
+                Group( Chain( "EMU_e60_lhmedium_nod0_ringer_v11"              , "L1_EM22VHI", "HLT_e60_lhmedium_nod0_ringer_v11" ), None, 60 ),
+                Group( Chain( "EMU_e60_lhmedium_nod0_ringer_v11_v2_el"        , "L1_EM22VHI", "HLT_e60_lhmedium_nod0_ringer_v11_v2_el" ), None, 60 ),
 
 
                 ## e28 lhtight

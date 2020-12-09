@@ -10,15 +10,15 @@ parser = argparse.ArgumentParser(description = '', add_help = False)
 parser = argparse.ArgumentParser()
 
 
-parser.add_argument('-i','--inputFiles', action='store', 
+parser.add_argument('-i','--inputFiles', action='store',
     dest='inputFiles', required = True, nargs='+',
     help = "The input files that will be used to generate the plots")
 
-parser.add_argument('-o','--outputFile', action='store', 
+parser.add_argument('-o','--outputFile', action='store',
     dest='outputFile', required = False, default = None,
     help = "The output store name.")
 
-parser.add_argument('-n','--nov', action='store', 
+parser.add_argument('-n','--nov', action='store',
     dest='nov', required = False, default = -1, type=int,
     help = "Number of events.")
 
@@ -32,11 +32,11 @@ args = parser.parse_args()
 
 
 acc = EventATLAS( "EventATLASLoop",
-                  inputFiles = args.inputFiles, 
+                  inputFiles = args.inputFiles,
                   #treePath= '*/HLT/Physval/Egamma/fakes' if args.doEgam7 else '*/HLT/Physval/Egamma/probes',
                   treePath= '*/HLT/Egamma/Egamma/probes',
                   #treePath= '*/HLT/Egamma/Egamma/fakes' if args.doEgam7 else '*/HLT/Egamma/Egamma/probes',
-                  dataframe = DataframeEnum.Electron_v1, 
+                  dataframe = DataframeEnum.Electron_v1,
                   outputFile = args.outputFile,
                   level = LoggingLevel.INFO
                   )
@@ -47,10 +47,9 @@ from EventSelectionTool import EventSelection, SelectionType, EtCutType
 
 evt = EventSelection('EventSelection')
 evt.setCutValue( SelectionType.SelectionOnlineWithRings )
-evt.setCutValue( SelectionType.SelectionOnlineWithTrigElectrons )
 #pidname = 'MediumLLH_DataDriven_Rel21_Run2_2018'
 pidname = 'el_lhmedium'
-evt.setCutValue( SelectionType.SelectionPID, pidname ) 
+evt.setCutValue( SelectionType.SelectionPID, pidname )
 evt.setCutValue( EtCutType.L2CaloAbove , 15)
 
 ToolSvc += evt
@@ -70,20 +69,15 @@ triggerList = [
                 Group( Chain( "EMU_e17_lhvloose_nod0_ringer_v11_v2_el_L1EM15VHI", "L1_EM15VHI", "HLT_e17_lhvloose_nod0_ringer_v11_v2_el_L1EM15VHI"  ), "el_lhvloose", 17 ),
 
 
-                # e17 lhloose
-                #Group( TDT( "TDT_e17_lhloose_nod0" , "HLT_e17_lhloose_nod0"   ), "el_lhloose", 17 ),
-                #Group( Chain( "EMU_e17_lhloose_nod0_noringer"                  , "L1_EM15VH", "HLT_e17_lhloose_nod0_noringer"    ), "el_lhloose", 17 ),
-                #Group( Chain( "EMU_e17_lhloose_nod0_ringer_v6"                 , "L1_EM15VH", "HLT_e17_lhloose_nod0_ringer_v6"   ), "el_lhloose", 17 ),
-                #Group( Chain( "EMU_e17_lhloose_nod0_ringer_v8"                 , "L1_EM15VH", "HLT_e17_lhloose_nod0_ringer_v8"   ), "el_lhloose", 17 ),
-                #Group( Chain( "EMU_e17_lhloose_nod0_ringer_v10"                , "L1_EM15VH", "HLT_e17_lhloose_nod0_ringer_v10"  ), "el_lhloose", 17 ),
-
-
                 # # e60 lhmedium
-                #Group( TDT( "TDT_e60_lhmedium_nod0" , "HLT_e60_lhmedium_nod0"   ), "el_lhmedium", 60 ),
-                #Group( Chain( "EMU_e60_lhmedium_nod0_noringer'"               , "L1_EM22VHI", "HLT_e60_lhmedium_nod0_noringer"   ), "el_lhmedium", 60 ),
-                #Group( Chain( "EMU_e60_lhmedium_nod0_ringer_v6"               , "L1_EM22VHI", "HLT_e60_lhmedium_nod0_ringer_v6"  ), "el_lhmedium", 60 ),
-                #Group( Chain( "EMU_e60_lhmedium_nod0_ringer_v8"               , "L1_EM22VHI", "HLT_e60_lhmedium_nod0_ringer_v8"  ), "el_lhmedium", 60 ),
-                #Group( Chain( "EMU_e60_lhmedium_nod0_ringer_v10"              , "L1_EM22VHI", "HLT_e60_lhmedium_nod0_ringer_v10" ), "el_lhmedium", 60 ),
+                Group( TDT( "TDT_e60_lhmedium_nod0" , "HLT_e60_lhmedium_nod0"   ), "el_lhmedium", 60 ),
+                Group( Chain( "EMU_e60_lhmedium_nod0_noringer"                , "L1_EM22VHI", "HLT_e60_lhmedium_nod0_noringer"   ), "el_lhmedium", 60 ),
+                Group( Chain( "EMU_e60_lhmedium_nod0_ringer_v6"               , "L1_EM22VHI", "HLT_e60_lhmedium_nod0_ringer_v6"  ), "el_lhmedium", 60 ),
+                Group( Chain( "EMU_e60_lhmedium_nod0_ringer_v8"               , "L1_EM22VHI", "HLT_e60_lhmedium_nod0_ringer_v8"  ), "el_lhmedium", 60 ),
+                Group( Chain( "EMU_e60_lhmedium_nod0_ringer_v9"               , "L1_EM22VHI", "HLT_e60_lhmedium_nod0_ringer_v9"  ), "el_lhmedium", 60 ),
+                Group( Chain( "EMU_e60_lhmedium_nod0_ringer_v10"              , "L1_EM22VHI", "HLT_e60_lhmedium_nod0_ringer_v10" ), "el_lhmedium", 60 ),
+                Group( Chain( "EMU_e60_lhmedium_nod0_ringer_v11"              , "L1_EM22VHI", "HLT_e60_lhmedium_nod0_ringer_v11" ), "el_lhmedium", 60 ),
+                Group( Chain( "EMU_e60_lhmedium_nod0_ringer_v11_v2_el"        , "L1_EM22VHI", "HLT_e60_lhmedium_nod0_ringer_v11_v2_el" ), "el_lhmedium", 60 ),
 
 
                 ## e28 lhtight
