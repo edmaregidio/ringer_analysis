@@ -54,7 +54,7 @@ from EventSelectionTool import EventSelection, SelectionType, EtCutType
 
 evt = EventSelection('EventSelection')
 evt.setCutValue( SelectionType.SelectionOnlineWithRings )
-evt.setCutValue( SelectionType.SelectionOnlineWithTrigElectrons )
+#evt.setCutValue( SelectionType.SelectionOnlineWithTrigElectrons )
 
 # Do not change this!
 if args.doEgam7:
