@@ -1,7 +1,5 @@
+# Data preparation to Run 2:
 
-# Run2: 2020
+This directory is responsible to hold all scripts used to collect samples for tuning phase.
 
-This directory is dedicated to include analysis related to new developments to Run 3.
-
-**NOTE**: This is a preparation to Run 3.
-
+**WARNING**: Do not change any thing here. 
