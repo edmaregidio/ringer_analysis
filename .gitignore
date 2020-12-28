@@ -1,6 +1,5 @@
 *.pyc
-.ipynb_checkpoints/*
-doc/.ipynb_checkpoints/*
+.ipynb_checkpoints
 *.mat
 *.pic
 *.gz
