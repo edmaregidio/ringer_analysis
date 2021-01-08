@@ -27,7 +27,7 @@ if args.name == 'lps':
   path3 = '/home/asp-calo/jodafons/tuning_data'
 elif args.name == 'castor':
   path1 = '/Volumes/castor/cern_data'
-  path2 = '/Volumes/castor/phd_data/analysis/electron/run2/2017/commissioning'
+  path2 = '/Volumes/castor/phd_data/analysis/zee_run2/2017/commissioning'
   path3 = '/Volumes/castor/tuning_data'
 elif args.name == 'cern':
   path1 = '/eos/user/j/jodafons/cern_data'

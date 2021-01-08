@@ -41,7 +41,7 @@ args = parser.parse_args()
 
 acc = EventATLAS( inputFiles = args.inputFiles, 
                   treePath= '*/HLT/Physval/Egamma/fakes' if args.doEgam7 else '*/HLT/Physval/Egamma/probes',
-                  dataframe = DataframeEnum.PhysVal_v2, 
+                  dataframe = Dataframe.PhysVal_v2, 
                   outputFile=args.outputFile,
                   nov = args.nov,
                   level = LoggingLevel.INFO)
@@ -64,9 +64,14 @@ evt.setCutValue( EtCutType.L2CaloAbove , 15)
 ToolSvc += evt
 
 
+from EmulationTools import EmulationTool
+ToolSvc += EmulationTool( "EgammaEmulation" )
+
+
 
 from QuadrantTools import QuadrantTool
 alg = QuadrantTool("Quadrant")
+alg.doTrigger  = True
 alg.add_quadrant( 'HLT_e28_lhtight_nod0_noringer_ivarloose'  , "TDT__HLT__e28_lhtight_nod0_noringer_ivarloose", # T2Calo
                   'HLT_e28_lhtight_nod0_ivarloose'           , "TDT__HLT__e28_lhtight_nod0_ivarloose") # Ringer
 
@@ -77,6 +82,6 @@ alg.setEtaBinningValues(etalist)
 ToolSvc += alg
 
 
-acc.run(args.nov)
+acc.run()
 
 
