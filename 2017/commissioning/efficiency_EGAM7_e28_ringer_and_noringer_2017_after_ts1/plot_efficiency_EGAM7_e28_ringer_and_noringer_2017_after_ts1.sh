@@ -6,7 +6,7 @@ TRIGGERS="[
 
 
 
-DATA_2017_AFTER_TS1="../cern_data/data17_13TeV/Mon/EGAM7/after_ts1/"
+DATA_2017_AFTER_TS1="/Volumes/castor/cern_data/data17_13TeV/Mon/EGAM7/after_ts1/"
 RUNLABEL="Data 2017, #sqrt{s}=13 TeV"
 EXTRATEXT1="['e28_lhtight_nod0_ivarloose']"
 plot_groups.py  -t $DATA_2017_AFTER_TS1 \
