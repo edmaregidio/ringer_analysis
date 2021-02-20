@@ -58,14 +58,14 @@ from TrigEgammaEmulationTool import Chain, Group, TDT
 triggerList = [
                 # e17 lhvloose
                 Group( TDT( "TDT_e17_lhvloose_nod0_L1EM15VHI" , "HLT_e17_lhvloose_nod0_L1EM15VHI"   ), "el_lhvloose", 17 ),
-                Group( Chain( "EMU_e17_lhvloose_nod0_noringer_L1EM15VHI"        , "L1_EM15VHI", "HLT_e17_lhvloose_nod0_noringer_L1EM15VHI"    ), "el_lhvloose", 17 ),
+                #Group( Chain( "EMU_e17_lhvloose_nod0_noringer_L1EM15VHI"        , "L1_EM15VHI", "HLT_e17_lhvloose_nod0_noringer_L1EM15VHI"    ), "el_lhvloose", 17 ),
                 Group( Chain( "EMU_e17_lhvloose_nod0_ringer_v8_L1EM15VHI"       , "L1_EM15VHI", "HLT_e17_lhvloose_nod0_ringer_v8_L1EM15VHI"   ), "el_lhvloose", 17 ),
                 Group( Chain( "EMU_e17_lhvloose_nod0_ringer_v9_r2_L1EM15VHI"       , "L1_EM15VHI", "HLT_e17_lhvloose_nod0_ringer_v9_r2_L1EM15VHI"   ), "el_lhvloose", 17 ),
                 
 
                 # # e60 lhmedium
                 Group( TDT( "TDT_e60_lhmedium_nod0" , "HLT_e60_lhmedium_nod0"   ), "el_lhmedium", 60 ),
-                Group( Chain( "EMU_e60_lhmedium_nod0_noringer"                , "L1_EM22VHI", "HLT_e60_lhmedium_nod0_noringer"   ), "el_lhmedium", 60 ),
+                #Group( Chain( "EMU_e60_lhmedium_nod0_noringer"                , "L1_EM22VHI", "HLT_e60_lhmedium_nod0_noringer"   ), "el_lhmedium", 60 ),
                 Group( Chain( "EMU_e60_lhmedium_nod0_ringer_v8"               , "L1_EM22VHI", "HLT_e60_lhmedium_nod0_ringer_v8"  ), "el_lhmedium", 60 ),
                 Group( Chain( "EMU_e60_lhmedium_nod0_ringer_v9_r2"               , "L1_EM22VHI", "HLT_e60_lhmedium_nod0_ringer_v9_r2"  ), "el_lhmedium", 60 ),
             
@@ -73,7 +73,7 @@ triggerList = [
 
                 ## e28 lhtight
                 Group( TDT( "TDT_e28_lhtight_nod0_noringer_ivarloose" , "HLT_e28_lhtight_nod0_noringer_ivarloose"   ), "el_lhtight", 28 ),
-                Group( Chain( "EMU_e28_lhtight_nod0_noringer_ivarloose"        , "L1_EM24VHI", "HLT_e28_lhtight_nod0_noringer_ivarloose"   ), "el_lhtight", 28 ),
+                #Group( Chain( "EMU_e28_lhtight_nod0_noringer_ivarloose"        , "L1_EM24VHI", "HLT_e28_lhtight_nod0_noringer_ivarloose"   ), "el_lhtight", 28 ),
                 Group( Chain( "EMU_e28_lhtight_nod0_ringer_v8_ivarloose"       , "L1_EM24VHI", "HLT_e28_lhtight_nod0_ringer_v8_ivarloose"  ), "el_lhtight", 28 ),
                 Group( Chain( "EMU_e28_lhtight_nod0_ringer_v9_r2_ivarloose"       , "L1_EM24VHI", "HLT_e28_lhtight_nod0_ringer_v9_r2_ivarloose"  ), "el_lhtight", 28 ),
 
